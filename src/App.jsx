@@ -1,18 +1,28 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
 
 function Uyg1() {
- const players = [{
-  ad:"yusuf",
-  soyad:"ercetin"
- },2,3,4,5]
 
+  const isimler = ["yusuf", "burak", "sevim", "ayse"]
   return (
-    <div id='general'>
-     <p id='p'>oyuncu = {players[0[2]]}</p>
+    <div>
+      {
+        isimler.map((isim, index) => (
+          <div key={index}
+          style={
+            {
+              backgroundColor : "crimson",
+              border: "solid black 2px",
+              marginTop: "10px",
+              textAlign: "center",
+              width:"200px",
+            }
+          }
+          >{isim}</div>
+        )) 
+      }
     </div>
-
   );
 }
 
-export default Uyg1
+export default Uyg1;
